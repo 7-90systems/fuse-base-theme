@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+/**
+ *  Theme Name: Fuse CMS Base Theme
+ *  Theme URI: https://fusecms.org/themes/base
+ *  Author: 7-90 Systems
+ *  Author URI: https://7-90.com.au
+ *  Description: Our Base Theme lets you quckly and easily set up a theme for your site using the Fuse CMS Framework for WordPress.
+ *  Tested up to: 5.9.3
+ *  Requires at least: 5.9.3
+ *  Requires PHP: 8.0
+ *  Version: 1.0.0
+ *  License: GNU General Public License v2 or later
+ *  License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ *  Text Domain: fuse
+ */
+
+/*  **********************************************************************************  **
+**  **********************************************************************************  **
+
+    These are our site-wide style variables. These can be over-written by a child theme
+    as well as settings in the admin area.
+
+**  **********************************************************************************  **
+**  **********************************************************************************  */
+
+:root {
+    
+    /*  ************************************************************************  **
+    
+        Website colours
+    
+    **  ************************************************************************  */
+    
+    --white: #FFFFFF;
+    --black: #000000;
+    
+}
