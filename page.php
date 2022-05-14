@@ -12,7 +12,7 @@
     fuse_get_header ();
     fuse_get_sidebar ('left');
 ?>
-<div id="primary" class="content-area">
+<div id="primary" class="content-area <?php echo fuse_base_get_primary_classes (); ?>">
 	<main id="main" class="site-main">
 
 		<?php
