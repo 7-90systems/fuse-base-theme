@@ -32,6 +32,14 @@
             
             // Add our function files
             add_filter ('fuse_load_functions_from', array ($this, 'addFunctionFileDirectory'));
+            
+            // Add theme supports
+            add_filter ('fuse_theme_supports', array ($this, 'themeSupports'));
+            
+            // Set up our admin functionality
+            if (is_admin ()) {
+                $admin_settings = new Admin\Settings ();
+            } // if ()
         } // __construct ()
         
         
@@ -77,6 +85,22 @@
             
             return $dirs;
         } // addFunctionFileDirectory ()
+        
+        /**
+         *  Add our theme supports statements.
+         *
+         *  @param array $supports The initla supports list.
+         *
+         *  @return array The completed supports list.
+         */
+        public function themeSupports ($supports) {
+            $supports [] = 'custom-logo';
+            $supports [] = 'post-thumbnails';
+            $supports [] = 'woocommerce';
+            
+            return $supports;
+        } // themeSupports ()
+        
         
         
         

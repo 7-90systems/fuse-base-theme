@@ -1,0 +1,83 @@
+/**
+ *  @package fuse-base-theme
+ *
+ *  @version 1.0.0
+ */
+
+/*  ********************************************************************************  **
+ 
+    These are our grid layout style definitions.
+    
+    We use a 16-column grid layout as default.
+ 
+ **  ********************************************************************************  */
+
+.fuse-grid-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: var(--padding-small);
+}
+.fuse-grid-container.full-height {
+    align-items: stretch;
+}
+.fuse-grid-container.align-center {
+    justify-content: center;
+}
+.fuse-grid-container.align-right {
+    justify-content: flex-end;
+}
+
+.fuse-grid-container > .fuse-grid-col {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+                                    border: 1px dotted #CC0000;
+}
+
+.fuse-grid-container > .fuse-grid-col.col-1 {
+    width: calc((100% - (var(--padding-small) * 15)) / 16);
+}
+.fuse-grid-container > .fuse-grid-col.col-2 {
+    width: calc((100% - (var(--padding-small) * 15)) / 16 * 2 + (var(--padding-small)));
+}
+.fuse-grid-container > .fuse-grid-col.col-3 {
+    width: calc((100% - (var(--padding-small) * 15)) / 16 * 3 + (var(--padding-small) * 2));
+}
+.fuse-grid-container > .fuse-grid-col.col-4 {
+    width: calc((100% - (var(--padding-small) * 15)) / 16 * 4 + (var(--padding-small) * 3));
+}
+.fuse-grid-container > .fuse-grid-col.col-5 {
+    width: calc((100% - (var(--padding-small) * 15)) / 16 * 5 + (var(--padding-small) * 4));
+}
+.fuse-grid-container > .fuse-grid-col.col-6 {
+    width: calc((100% - (var(--padding-small) * 15)) / 16 * 6 + (var(--padding-small) * 5));
+}
+.fuse-grid-container > .fuse-grid-col.col-7 {
+    width: calc((100% - (var(--padding-small) * 15)) / 16 * 7 + (var(--padding-small) * 6));
+}
+.fuse-grid-container > .fuse-grid-col.col-8 {
+    width: calc((100% - (var(--padding-small) * 15)) / 16 * 8 + (var(--padding-small) * 7));
+}
+.fuse-grid-container > .fuse-grid-col.col-9 {
+    width: calc((100% - (var(--padding-small) * 15)) / 16 * 9 + (var(--padding-small) * 8));
+}
+.fuse-grid-container > .fuse-grid-col.col-10 {
+    width: calc((100% - (var(--padding-small) * 15)) / 16 * 10 + (var(--padding-small) * 9));
+}
+.fuse-grid-container > .fuse-grid-col.col-11 {
+    width: calc((100% - (var(--padding-small) * 15)) / 16 * 11 + (var(--padding-small) * 10));
+}
+.fuse-grid-container > .fuse-grid-col.col-12 {
+    width: calc((100% - (var(--padding-small) * 15)) / 16 * 12 + (var(--padding-small) * 11));
+}
+.fuse-grid-container > .fuse-grid-col.col-13 {
+    width: calc((100% - (var(--padding-small) * 15)) / 16 * 13 + (var(--padding-small) * 12));
+}
+.fuse-grid-container > .fuse-grid-col.col-14 {
+    width: calc((100% - (var(--padding-small) * 15)) / 16 * 14 + (var(--padding-small) * 13));
+}
+.fuse-grid-container > .fuse-grid-col.col-15 {
+    width: calc((100% - (var(--padding-small) * 15)) / 16 * 15 + (var(--padding-small) * 14));
+}
