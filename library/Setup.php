@@ -89,7 +89,7 @@
         /**
          *  Add our theme supports statements.
          *
-         *  @param array $supports The initla supports list.
+         *  @param array $supports The initial supports list.
          *
          *  @return array The completed supports list.
          */

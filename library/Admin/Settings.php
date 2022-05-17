@@ -65,7 +65,7 @@
                     new Component\Field\Toggle (
                         'fuse_base_footer_show_copyright',
                         __ ('Show copyright bar', 'fuse'),
-                        get_fuse_option ('fuse_base_footer_show_footer', 'yes')
+                        get_fuse_option ('fuse_base_footer_show_copyright', 'yes')
                     )
                 ))
             ));
