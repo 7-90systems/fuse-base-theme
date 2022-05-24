@@ -6,6 +6,7 @@
      *
      *  @filter fuse_base_sidebar_single_cols
      *  @filter fuse_base_sidebar_multi_cols
+     *  @filter fuse_base_footer_columns
      *
      *  Lets set up our theme!
      */
@@ -35,6 +36,12 @@
             
             // Add theme supports
             add_filter ('fuse_theme_supports', array ($this, 'themeSupports'));
+            
+            // Get our themes features set up
+            add_filter ('fuse_sidebars', array ($this, 'addSidebars'));
+            
+            // Set up our CSS style rules in the page header.
+            add_action ('wp_header', array ($this, 'addCustomCss'), 20);
             
             // Set up our admin functionality
             if (is_admin ()) {
@@ -100,6 +107,33 @@
             
             return $supports;
         } // themeSupports ()
+        
+        /**
+         *  Add our sidebars.
+         *
+         *  @param array $sidebars The starting set of sidebars.
+         *
+         *  @return array The completed sidebar list.
+         */
+        public function addSidebars ($sidebars) {
+            // Footer columns
+            for ($i = 0; $i < apply_filters ('fuse_base_footer_columns', 3); $i++) {
+                $sidebars ['footer_column_'.$i] = sprintf (__ ('Footer Column %d', 'fuse'), $i + 1);
+            } // for ()
+            
+            return $sidebars;
+        } // addSidebars ()
+        
+        /**
+         *  Add our custom CSS styles to the header area.
+         */
+        public function customCss () {
+            ?>
+                <style type="text/css" media="all">
+                    
+                </style>
+            <?php
+        } // customCss ()
         
         
         
