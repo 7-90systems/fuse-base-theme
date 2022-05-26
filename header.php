@@ -64,3 +64,4 @@
     ?>
 
 	<div id="content" class="site-content fuse-grid-container">
+            <div class="wrap">

@@ -17,7 +17,25 @@
     if (!defined ('ABSPATH')) {
         die ();
     } // if ()
+    
+    $copyright_text = get_fuse_option ('fuse_base_footer_copyright_text', '');
+    $credits_text = get_fuse_option ('fuse_base_footer_credits_text', '');
+    
+    if (empty ($copyright_text)) {
+        $copyright_text = sprintf (__ ('&copy; Copyright %s %s.', 'fuse'), current_time ('Y'), get_bloginfo ('name'));
+    } // if ()
+    else {
+        $copyright_text = fuse_base_set_footer_text_vars ($copyright_text);
+    } // else
+    
+    if (empty ($credits_text)) {
+        $credits_text = '<a href="https://fusecms.org">'.__ ('Built using the Fuse CMS Framework', 'fuse').'</a>';
+    } // if ()
+    else {
+        $credits_text = fuse_base_set_footer_text_vars ($credits_text);
+    } // else
 ?>
+        </div><!-- .wrap -->
     </div><!-- #content -->
     
     <?php if (get_fuse_option ('fuse_base_footer_show_footer', 'yes') != 'no'): ?>
@@ -58,12 +76,12 @@
                 <?php
                     do_action ('fuse_base_before_copyright');
                 ?>
-                <p class="copyright"><?php printf (__ ('&copy; Copyright %s %s.', 'fuse'), current_time ('Y'), get_bloginfo ('name')); ?></p>
+                <p class="copyright"><?php echo $copyright_text; ?></p>
                 <?php
                     do_action ('fuse_base_after_copyright');
                     do_action ('fuse_base_before_credits');
                 ?>
-                <p class="credits"><a href="https://fusecms.org"><?php _e ('Built using the Fuse CMS Framework', 'fuse'); ?></a></p>
+                <p class="credits"><?php echo $credits_text; ?></p>
                 <?php
                     do_action ('fuse_base_after_credits');
                 ?>

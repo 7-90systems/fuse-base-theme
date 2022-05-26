@@ -33,7 +33,14 @@
     display: block;
     width: 100%;
     box-sizing: border-box;
-                                    border: 1px dotted #CC0000;
+}
+
+.fuse-grid-container .fuse-grid-col.spacer {
+    margin: 0;
+    padding: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
 }
 
 .fuse-grid-container > .fuse-grid-col.col-1 {

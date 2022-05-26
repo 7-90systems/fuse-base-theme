@@ -66,6 +66,34 @@
                         'fuse_base_footer_show_copyright',
                         __ ('Show copyright bar', 'fuse'),
                         get_fuse_option ('fuse_base_footer_show_copyright', 'yes')
+                    ),
+                    new Component\Field\Text (
+                        'fuse_base_footer_copyright_text',
+                        __ ('Copyright text', 'fuse'),
+                        get_fuse_option ('fuse_base_footer_copyright_text', ''),
+                        array (
+                            'placeholder' => __ ('Leave blank for default text', 'fuse'),
+                            'conditions' => array (
+                                array (
+                                    'field_id' => 'fuse_base_footer_show_copyright',
+                                    'value' => 'yes'
+                                )
+                            )
+                        )
+                    ),
+                    new Component\Field\Text (
+                        'fuse_base_footer_credits_text',
+                        __ ('Credits text', 'fuse'),
+                        get_fuse_option ('fuse_base_footer_credits_text', ''),
+                        array (
+                            'placeholder' => __ ('Leave blank for default text', 'fuse'),
+                            'conditions' => array (
+                                array (
+                                    'field_id' => 'fuse_base_footer_show_copyright',
+                                    'value' => 'yes'
+                                )
+                            )
+                        )
                     )
                 ))
             ));
