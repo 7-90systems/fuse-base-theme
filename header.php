@@ -3,6 +3,11 @@
      *  @package fuse-base-theme
      *
      *  @version 1.0.0
+     *
+     *  @action fuse_base_before_header
+     *  @action fuse_base_start_header
+     *  @action fuse_base_end_header
+     *  @action fuse_base_after_header
      */
     
     if (!defined ('ABSPATH')) {
@@ -30,6 +35,8 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e ('Skip to content', 'fuse'); ?></a>
     
     <?php
+        do_action ('fuse_base_before_header');
+        
         if ($user_bar_location == 'over_header') {
             get_template_part ('templates/header/user-bar');
         } // if ()
@@ -39,6 +46,8 @@
         <div class="wrap">
             
             <?php
+                do_action ('fuse_base_start_header');
+                
                 get_template_part ('templates/header/logo');
             
                 if ($user_bar_location == 'in_header') {
@@ -48,6 +57,8 @@
                 if ($menu_bar_location == 'in_header') {
                     get_template_part ('templates/header/menu');
                 } // if ()
+                
+                do_action ('fuse_base_end_header');
             ?>
     
         </div>
@@ -61,6 +72,8 @@
         if ($menu_bar_location == 'under_header') {
             get_template_part ('templates/header/menu');
         } // if ()
+        
+        do_action ('fuse_base_after_header');
     ?>
 
 	<div id="content" class="site-content fuse-grid-container">
