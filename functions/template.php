@@ -55,7 +55,7 @@
             ), array (
                 current_time ('Y'),
                 current_time ($date_format),
-                get_bloginfo ('name')
+                '<a href="'.esc_url (home_url ('/')).'">'.get_bloginfo ('name').'</a>'
             ), $text);
         } // fuse_base_set_footer_text_vars ()
     } // if ()
