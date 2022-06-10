@@ -55,6 +55,8 @@
             
                 <li class="login">
                     <a href="<?php echo $login_url; ?>"><?php _e ('Login', 'fuse'); ?></a>
+                </li>
+                <li class="login register">
                     <a href="<?php echo $register_url; ?>"><?php _e ('Register', 'fuse'); ?></a>
                 </li>
             
