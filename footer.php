@@ -8,10 +8,14 @@
      *  @filter fuse_base_before_footer_columns
      *  @filter fuse_base_after_footer_columns
      *  @filter fuse_base_before_footer_col_*NUM*
+     *  @filter fuse_base_after_footer_col_*NUM*
      *  @filter fuse_base_before_copyright
      *  @filter fuse_base_after_copyright
      *  @filter fuse_base_before_credits
      *  @filter fuse_base_after_credits
+     *
+     *  @action fuse_base_before_footer
+     *  @action fuse_base_after_footer
      */
     
     if (!defined ('ABSPATH')) {
@@ -38,6 +42,10 @@
         </div><!-- .wrap -->
     </div><!-- #content -->
     
+    <?php
+        do_action ('fuse_base_before_footer');
+    ?>
+    
     <?php if (get_fuse_option ('fuse_base_footer_show_footer', 'yes') != 'no'): ?>
     
         <footer id="site-footer">
@@ -52,7 +60,7 @@
                     <ul class="footer-column footer-column-<?php echo $i + 1; ?>">
                         <?php
                             do_action ('fuse_base_before_footer_col_'.$i);
-                            dynamic_sidebar ('footer_column_'.($i + 1));
+                            dynamic_sidebar ('footer_column_'.($i));
                             do_action ('fuse_base_after_footer_col_'.$i);
                         ?>
                     </ul>
@@ -90,6 +98,10 @@
         </footer><!-- #site-copyright -->
     
     <?php endif; ?>
+    
+    <?php
+        do_action ('fuse_base_after_footer');
+    ?>
 
 </div><!-- #page -->
 
