@@ -77,4 +77,4 @@
     ?>
 
 	<div id="content" class="site-content fuse-grid-container">
-            <div class="wrap">
+            <div class="wrap fuse-grid-col col-16">

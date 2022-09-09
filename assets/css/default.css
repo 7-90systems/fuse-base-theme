@@ -88,3 +88,7 @@
 .fuse-grid-container > .fuse-grid-col.col-15 {
     width: calc((100% - (var(--padding-small) * 15)) / 16 * 15 + (var(--padding-small) * 14));
 }
+.fuse-grid-container > .fuse-grid-col.full,
+.fuse-grid-container > .fuse-grid-col.col-16 {
+    width: 100%;
+}
