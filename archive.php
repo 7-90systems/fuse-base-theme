@@ -10,29 +10,43 @@
     } // if ()
     
     fuse_get_header ();
-    fuse_get_sidebar ('left');
 ?>
-<div id="primary" class="content-area">
-	<main id="main" class="site-main">
-
-	<?php
-        if (have_posts ()) {
-            the_archive_title ('<h1 class="page-title">', '</h1>');
-            
-			while (have_posts ()) {
-				the_post ();
-				get_template_part ('templates/archive/content', get_post_type ());
-            } // while ()
-            
-            fuse_paging_nav ();
-        } // if ()
-		else {
-			get_template_part ('templates/single/content', 'none');
-		} // else
-	?>
+<div id="fuse-bsae-single-content" class="fuse-container">
+    <div class="wrap">
         
-	</main><!-- #main -->
-</div><!-- #primary -->
+        <div class="fuse-grid-row">
+                
+            <?php
+                fuse_get_sidebar ('left');
+            ?>
+            <div id="primary" class="content-area <?php echo fuse_base_get_primary_classes (); ?>">
+                <main id="main" class="site-main">
+                
+                    <?php
+                        if (have_posts ()) {
+                            the_archive_title ('<h1 class="page-title">', '</h1>');
+                            
+                            while (have_posts ()) {
+                                the_post ();
+                                get_template_part ('templates/archive/content', get_post_type ());
+                            } // while ()
+                            
+                            fuse_paging_nav ();
+                        } // if ()
+                        else {
+                            get_template_part ('templates/single/content', 'none');
+                        } // else
+                    ?>
+                
+                </main><!-- #main -->
+            </div><!-- #primary -->
+            <?php
+                fuse_get_sidebar ('right');
+            ?>
+                
+        </div>
+        
+    </div>
+</div>
 <?php
-    fuse_get_sidebar ('right');
     fuse_get_footer ();
