@@ -22,6 +22,8 @@
         die ();
     } // if ()
     
+    $footer_columns = get_fuse_option ('fuse_base_footer_columns', 4);
+    
     $copyright_text = get_fuse_option ('fuse_base_footer_copyright_text', '');
     $credits_text = get_fuse_option ('fuse_base_footer_credits_text', '');
     
@@ -46,16 +48,16 @@
         do_action ('fuse_base_before_footer');
     ?>
     
-    <?php if (get_fuse_option ('fuse_base_footer_show_footer', 'yes') != 'no'): ?>
+    <?php if (get_fuse_option ('fuse_base_footer_show_footer', 'yes') != 'no' && $footer_columns > 0): ?>
     
-        <footer id="site-footer">
+        <footer id="site-footer" class="fuse-container">
             <div class="wrap">
                 
                 <?php
                     do_action ('fuse_base_before_footer_columns');
                 ?>
                 
-                <?php for ($i = 0; $i < apply_filters ('fuse_base_footer_columns', 3); $i++) : ?>
+                <?php for ($i = 0; $i < $footer_columns; $i++) : ?>
                         
                     <ul class="footer-column footer-column-<?php echo $i + 1; ?>">
                         <?php
@@ -78,7 +80,7 @@
     
     <?php if (get_fuse_option ('fuse_base_footer_show_copyright', 'yes') != 'no'): ?>
         
-        <footer id="site-copyright">
+        <footer id="site-copyright" class="fuse-container">
             <div class="wrap">
                 
                 <?php

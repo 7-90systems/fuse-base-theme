@@ -94,6 +94,15 @@
                                 )
                             )
                         )
+                    ),
+                    new Component\Field\Number (
+                        'fuse_base_footer_columns',
+                        __ ('Footer columns', 'fuse'),
+                        get_fuse_option ('fuse_base_footer_columns', 4),
+                        array (
+                            'min' => '0',
+                            'max' => '10',
+                        )
                     )
                 ))
             ));

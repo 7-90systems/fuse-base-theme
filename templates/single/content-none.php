@@ -1,6 +1,6 @@
 <?php
     /**
-     *  @package fuse-bsae-theme
+     *  @package fuse-base-theme
      *
      *  @version 1.0.0
      */

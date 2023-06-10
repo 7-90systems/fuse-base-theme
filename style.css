@@ -13,6 +13,8 @@
  *  License: GNU General Public License v2 or later
  *  License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *  Text Domain: fuse
+ *
+ *  Fuse Update Server: https://fuse-local
  */
 
 /*  **********************************************************************************  **
@@ -26,27 +28,53 @@
 
 :root {
     
-    /*  ************************************************************************  **
+    /*  **********  Over-ride the default Fuse CMS settings  *********  */
     
-        Website colours
-    
-    **  ************************************************************************  */
-    
-    --white: #FFFFFF;
-    --black: #000000;
+    --fuse-container-padding-y: 30px;
     
     
     
     
-    /*  ************************************************************************  **
+    /*  **********  Colours  **********  */
     
-        Layout Settings
+    --fuse-base-colour-primary: #444444;
+    --fuse-base-colour-secondary: #FF4D4D;
     
-    **  ************************************************************************  */
+    --fuse-base-colour-white: #FFFFFF;
+    --fuse-basecolour-light-grey: #F4F4F4;
+    --fuse-base-colour-mid-grey: #888888;
+    --fuse-base-colour-dark-grey: #333333;
+    --fuse-base-colour-black: #000000;
     
-    --padding-tiny: 10px;
-    --padding-small: 20px;
-    --padding-default: 50px;
-    --padding-large: 100px;
+    
+    
+    
+    /*  **********  Fonts  **********  */
+    
+    --fuse-base-font-family-text: Arial, sans-serif;
+    --fuse-bsae-font-family-heading: "Times New Roman", Times, serif;
+    
+    --fuse-base-font-size-h1: 40px;
+    --fuse-base-font-size-h2: 32px;
+    --fuse-base-font-size-h3: 26px;
+    --fuse-base-font-size-h4: 22px;
+    --fuse-base-font-size-h5: 20px;
+    --fuse-base-font-size-h6: 18px;
+    --fuse-base-font-size-p: 16px;
+    --fuse-base-font-size-small: 14px;
+    
+    --fuse-base-line-height-default: 1.4em;
+    --fuse-base-line-height-tight: 1.2em;
+    --fuse-base-line-height-large: 1.6em;
+    
+    
+    
+    
+    /*  **********  Layout and spacing  **********  */
+    
+    --fuse-base-margin-p: 15px;
+    --fuse-base-margin-heading: 30px;
+    
+    --fuse-base-padding-copyright: 10px;
     
 }

@@ -117,7 +117,7 @@
          */
         public function addSidebars ($sidebars) {
             // Footer columns
-            for ($i = 0; $i < apply_filters ('fuse_base_footer_columns', 3); $i++) {
+            for ($i = 0; $i < get_fuse_option ('fuse_base_footer_columns', 4); $i++) {
                 $sidebars ['footer_column_'.$i] = sprintf (__ ('Footer Column %d', 'fuse'), $i + 1);
             } // for ()
             

@@ -2,4 +2,228 @@
  *  @package fuse-base-theme
  *
  *  @version 1.0.0
+ *
+ *  We try to use a mobile-first approach so we work up to larger screens.
  */
+
+/*  ********************************************************************************  **
+**  ********************************************************************************  **
+
+    Set up our base styles!
+
+**  ********************************************************************************  **
+**  ********************************************************************************  */
+
+
+
+
+/*  ********************************************************************************  **
+
+    Standard HTML tags
+
+**  ********************************************************************************  */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fuse-base-font-family-text);
+    font-size: var(--fuse-bse-font-size-p);
+    font-weight: var(--fuse-base-font-weight-normal);
+}
+p,
+li {
+    font-size: var(--fuse-base-font-size-p);
+    line-height: var(--fuse-base-line-height-default);
+    margin: var(--fuse-base-margin-p) 0;
+    padding: 0;
+}
+li {
+    margin: calc(var(--fuse-base-margin-p) * 0.8) 0;
+}
+
+a {
+    color: var(--fuse-base-colour-secondary);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+a:hover {
+    text-decoration-style: solid;
+}
+
+
+
+
+/*  ********************************************************************************  **
+
+    Font styles
+
+**  ********************************************************************************  */
+
+p:first-child,
+li:first-child,
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+    margin-top: 0;
+}
+p:last-child,
+li:last-child,
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child {
+    margin-bottom: 0;
+}
+
+
+
+
+/*  ********************************************************************************  **
+
+    Footer copyright and credits block
+
+**  ********************************************************************************  */
+
+#site-copyright.fuse-container {
+    background: var(--fuse-base-colour-dark-grey);
+    color: var(--fuse-base-colour-white);
+    padding-top: var(--fuse-base-padding-copyright);
+    padding-bottom: var(--fuse-base-padding-copyright);
+}
+#site-copyright.fuse-container > .wrap-copyright.fuse-container > .wrap {
+    text-align: center;
+}
+
+#site-copyright.fuse-container p {
+    margin: 0;
+    padding: 0;
+    font-size: var(--fuse-base-font-size-small);
+    width: 100%;
+    text-align: center;
+}
+#site-copyright.fuse-container p:first-child {
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
+/*  ********************************************************************************  **
+**  ********************************************************************************  **
+
+    Media Queries
+    
+    We follow the Fuce CMS breakpoints:
+        XXL  - 1450px
+        XL   - 1200px
+        L    - 992px
+        M    - 768px
+        S    - 576px
+        XS   - Under 576px (default without media queries)
+
+**  ********************************************************************************  **
+**  ********************************************************************************  */
+
+
+
+
+/*  ********************************************************************************  **
+
+    Small - 576px
+
+**  ********************************************************************************  */
+
+@media screen and (min-width: 576px) {
+    
+    
+    
+}
+
+
+
+
+/*  ********************************************************************************  **
+
+    Medium - 768px
+
+**  ********************************************************************************  */
+
+@media screen and (min-width: 768px) {
+    
+    
+    
+}
+
+
+
+
+/*  ********************************************************************************  **
+
+    Large - 1450px
+
+**  ********************************************************************************  */
+
+@media screen and (min-width: 992px) {
+    
+    /*  ********************************************************************************  **
+
+        Footer copyright and credits block
+    
+    **  ********************************************************************************  */
+    
+    #site-copyright.fuse-container > .wrap {
+        text-align: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    #site-copyright.fuse-container p {
+        width: auto;
+        text-align: inherit;
+    }
+    #site-copyright.fuse-container p:first-child {
+        margin-bottom: 0;
+    }
+    
+}
+
+
+
+
+/*  ********************************************************************************  **
+
+    XL - 1200px
+
+**  ********************************************************************************  */
+
+@media screen and (min-width: 1200px) {
+    
+    
+    
+}
+
+
+
+
+/*  ********************************************************************************  **
+
+    XXL - 1450px
+
+**  ********************************************************************************  */
+
+@media screen and (min-width: 1450px) {
+    
+    
+    
+}

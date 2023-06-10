@@ -2,6 +2,8 @@
     /**
      *  @package fuse-base-theme
      *
+     *  @filter fuse_base_content_container_class
+     *
      *  @version 1.0.0
      */
     
@@ -11,10 +13,10 @@
     
     fuse_get_header ();
 ?>
-<div id="fuse-bsae-single-content" class="fuse-container">
+<div id="fuse-base-single-content" class="fuse-container">
     <div class="wrap">
         
-        <div class="fuse-grid-row">
+        <div class="<?php echo apply_filters ('fuse_base_content_container_class', 'fuse-grid-row'); ?>">
                 
             <?php
                 fuse_get_sidebar ('left');

@@ -26,7 +26,7 @@
                 
                     <?php
                         if (have_posts ()) {
-                            the_archive_title ('<h1 class="page-title">', '</h1>');
+                            single_cat_title ('<h1 class="page-title">', '</h1>');
                             
                             while (have_posts ()) {
                                 the_post ();
