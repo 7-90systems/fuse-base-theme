@@ -40,7 +40,7 @@
                         array (
                             'under_header' => __ ('Under header', 'fuse'),
                             'in_header' => __ ('In header', 'fuse'),
-                            'none' => __ ('No menu', 'fuse')
+                            'none' => __ ('Burger menu only', 'fuse')
                         ),
                         get_fuse_option ('fuse_base_header_menu_location', 'under_header')
                     ),
@@ -51,7 +51,7 @@
                             'over_header' => __ ('Over header', 'fuse'),
                             'under_header' => __ ('Under header', 'fuse'),
                             'in_header' => __ ('In header', 'fuse'),
-                            'none' => __ ('No menu', 'fuse')
+                            'none' => __ ('Hide user bar', 'fuse')
                         ),
                         get_fuse_option ('fuse_base_header_user_bar_location', 'none')
                     )

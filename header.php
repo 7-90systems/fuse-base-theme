@@ -38,11 +38,11 @@
         do_action ('fuse_base_before_header');
         
         if ($user_bar_location == 'over_header') {
-            get_template_part ('templates/header/user-bar');
+            get_template_part ('templates/header/user-bar', '', array ('use_container' => true));
         } // if ()
     ?>
 
-	<header id="site-header">
+	<header id="site-header" class="fuse-container">
         <div class="wrap">
             
             <?php
@@ -51,13 +51,20 @@
                 get_template_part ('templates/header/logo');
             
                 if ($user_bar_location == 'in_header') {
-                    get_template_part ('templates/header/user-bar');
+                    get_template_part ('templates/header/user-bar', '', array ('use_container' => false));
                 } // if ()
                 
                 if ($menu_bar_location == 'in_header') {
-                    get_template_part ('templates/header/menu');
+                    get_template_part ('templates/header/menu', '', array ('use_container' => false));
                 } // if ()
-                
+            ?>
+            
+            <button id="menu-toggle"<?php if ($menu_bar_location == 'none') echo ' class="always-show"'; ?>>
+                <span class="screen-reader-text"><?php _e ('Menu'); ?></span>
+                <span class="dashicons dashicons-menu"></span>
+            </button>
+            
+            <?php
                 do_action ('fuse_base_end_header');
             ?>
     
@@ -66,11 +73,11 @@
     
     <?php
         if ($user_bar_location == 'under_header') {
-            get_template_part ('templates/header/user-bar');
+            get_template_part ('templates/header/user-bar', '', array ('use_container' => true));
         } // if ()
         
         if ($menu_bar_location == 'under_header') {
-            get_template_part ('templates/header/menu');
+            get_template_part ('templates/header/menu', '', array ('use_container' => true));
         } // if ()
         
         do_action ('fuse_base_after_header');

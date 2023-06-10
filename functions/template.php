@@ -24,7 +24,7 @@
             
             $columns = $columns - ($sidebar_count * $cols_per_sidebar);
             
-            return 'fuse-grid-cell fuse-grid-cell-l-'.$columns;
+            return 'fuse-grid-cell no-padding fuse-grid-cell-l-'.$columns;
         } // fuse_base_get_primary_classes ()
     } // if ()
     

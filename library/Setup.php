@@ -66,7 +66,7 @@
             $sidebar_single_cols = apply_filters ('fuse_base_sidebar_single_cols', 3);
             $sidebar_multi_cols = apply_filters ('fuse_base_sidebar_multi_cols', 2);
             
-            $classes [] = 'fuse-grid-col';
+            $classes [] = 'fuse-grid-cell no-padding';
             
             $sidebar_count = $layout->getSidebarCount ();
             

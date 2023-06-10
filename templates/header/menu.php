@@ -10,7 +10,7 @@
         die ();
     } // if ()
 ?>
-<nav id="primary-menu-container">
+<nav id="primary-menu-container"<?php if (array_key_exists ('use_container', $args) && $args ['use_container'] === true) echo ' class="fuse-container"'; ?>>
     <div class="wrap">
         
         <?php

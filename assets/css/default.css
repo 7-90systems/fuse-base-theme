@@ -85,15 +85,81 @@ h6:last-child {
 
 /*  ********************************************************************************  **
 
+    Header block
+
+**  ********************************************************************************  */
+
+#site-header.fuse-container {
+    padding-top: var(--fuse-base-padding-header);
+    padding-bottom: var(--fuse-base-padding-header);
+}
+
+
+
+
+/*  ********************************************************************************  **
+
+    Navigation
+
+**  ********************************************************************************  */
+
+#primary-menu-container {
+    display: none;
+}
+
+
+
+
+/*  ********************************************************************************  **
+
+    Site footer block
+
+**  ********************************************************************************  */
+
+#site-footer.fuse-container {
+    background: var(--fuse-base-colour-primary);
+    color: var(--fuse-base-colour-white);
+    border-top: 5px solid var(--fuse-base-colour-secondary);
+}
+#site-footer.fuse-container a {
+    color: var(--fuse-base-colour-light-grey);
+}
+
+
+
+
+/*  **********  Columns  **********  */
+
+.footer-column,
+.footer-column > li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.footer-column {
+    display: grid;
+    gap: calc(var(--fuse-grid-gap) / 2);
+    grid-template-columns: 1fr;
+}
+
+
+
+
+/*  ********************************************************************************  **
+
     Footer copyright and credits block
 
 **  ********************************************************************************  */
 
 #site-copyright.fuse-container {
-    background: var(--fuse-base-colour-dark-grey);
+    background: var(--fuse-base-colour-mid-grey);
     color: var(--fuse-base-colour-white);
     padding-top: var(--fuse-base-padding-copyright);
     padding-bottom: var(--fuse-base-padding-copyright);
+    color: var(--fuse-base-colour-white);
+}
+#site-copyright.fuse-container  a {
+    color: var(--fuse-base-colour-white);
 }
 #site-copyright.fuse-container > .wrap-copyright.fuse-container > .wrap {
     text-align: center;
@@ -169,7 +235,7 @@ h6:last-child {
 
 /*  ********************************************************************************  **
 
-    Large - 1450px
+    Large - 992px
 
 **  ********************************************************************************  */
 
@@ -209,7 +275,32 @@ h6:last-child {
 
 @media screen and (min-width: 1200px) {
     
+    /*  ***********************************************************************  **
+
+        Navigation
     
+    **  ***********************************************************************  */
+    
+    #primary-menu-container {
+        display: block;
+    }
+    #menu-toggle:not(.always-show) {
+        display: none;
+    }
+    
+    
+    
+    
+    /*  ***********************************************************************  **
+
+        Navigation under header
+    
+    **  ***********************************************************************  */
+    
+    #primary-menu-container.fuse-container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
     
 }
 

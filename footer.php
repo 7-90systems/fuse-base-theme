@@ -23,6 +23,7 @@
     } // if ()
     
     $footer_columns = get_fuse_option ('fuse_base_footer_columns', 4);
+    $column_cells = 12 / $footer_columns;
     
     $copyright_text = get_fuse_option ('fuse_base_footer_copyright_text', '');
     $credits_text = get_fuse_option ('fuse_base_footer_credits_text', '');
@@ -51,7 +52,7 @@
     <?php if (get_fuse_option ('fuse_base_footer_show_footer', 'yes') != 'no' && $footer_columns > 0): ?>
     
         <footer id="site-footer" class="fuse-container">
-            <div class="wrap">
+            <div class="wrap fuse-grid-row spaced">
                 
                 <?php
                     do_action ('fuse_base_before_footer_columns');
@@ -59,7 +60,7 @@
                 
                 <?php for ($i = 0; $i < $footer_columns; $i++) : ?>
                         
-                    <ul class="footer-column footer-column-<?php echo $i + 1; ?>">
+                    <ul class="footer-column footer-column-<?php echo $i + 1; ?> fuse-grid-cell no-padding fuse-grid-cell-m-<?php echo $column_cells ?>">
                         <?php
                             do_action ('fuse_base_before_footer_col_'.$i);
                             dynamic_sidebar ('footer_column_'.($i));

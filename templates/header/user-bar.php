@@ -35,7 +35,7 @@
     
     $profile_text = apply_filters ('fuse_base_profile_link_text', $profile_text);
 ?>
-<nav id="fuse-user-bar">
+<nav id="fuse-user-bar"<?php if (array_key_exists ('use_container', $args) && $args ['use_container'] === true) echo ' class="fuse-container"'; ?>>
     <div class="wrap">
         
         <?php
