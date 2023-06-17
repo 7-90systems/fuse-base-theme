@@ -75,11 +75,11 @@
     --fuse-base-margin-p: 15px;
     --fuse-base-margin-heading: 30px;
     
-    --fuse-base-gap-container: var(--fuse-grid-gap);
     --fuse-base-padding-container-inner: 20px;
-    
     --fuse-base-padding-header: 20px;
-    
     --fuse-base-padding-copyright: 10px;
+    
+    --fuse-base-gap-container: var(--fuse-grid-gap);
+    --fuse-base-gap-user-bar: 20px;
     
 }
