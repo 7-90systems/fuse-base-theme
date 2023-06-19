@@ -17,7 +17,7 @@
             wp_nav_menu (array (
                 'theme_location' => 'primary',
                 'container' => false,
-                'menu_class' => apply_filters ('fuse_base_nav_menu_class', 'fuse-base-nav-menu')
+                'menu_class' => apply_filters ('fuse_base_nav_menu_class', 'fuse-base-nav-menu sf-menu')
             ));
         ?>
         
