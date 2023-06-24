@@ -108,7 +108,14 @@
 
 </div><!-- #page -->
 
-<?php wp_footer (); ?>
+<?php
+    wp_nav_menu (array (
+        'theme_location' => 'primary',
+        'container_id' => 'mobile_menu'
+    ));
+    
+    wp_footer ();
+?>
 
 </body>
 </html>

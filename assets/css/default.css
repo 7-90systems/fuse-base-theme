@@ -117,11 +117,24 @@ h6:last-child {
 
 
 
+/*  *********  Logo  **********  */
+
+#site-header img.custom-logo {
+    display: inline-block;
+    width: auto;
+    height: 50px;
+}
+
+
+
+
 /*  ********************************************************************************  **
 
     Navigation
 
 **  ********************************************************************************  */
+
+/* **********  Under header  **********  */
 
 #primary-menu-container {
     display: none;
@@ -140,17 +153,62 @@ h6:last-child {
 
 
 
+/*  **********  Inside header  **********  */
+
+#site-header #primary-menu-container {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+
+
+/*  **********  Superfish menus  **********  */
+
+.sf-menu li,
+.sf-menu ul li {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+.sf-menu li a {
+    background: var(--fuse-base-colour-primary);
+    color: var(--fuse-base-colour-white);
+}
+.sf-menu li a:hover,
+.sf-menu li.current-menu-item > a,
+.sf-menu li.current-menu-parent > a,
+.sf-menu li.current-menu-ancestor > a {
+    background: var(--fuse-base-colour-secondary);
+}
+
+
+
+
+
+
 /*  ********************************************************************************  **
 
     User bar
     
 **  ********************************************************************************  */
 
-#fuse-user-bar {
-    position: absolute;
-    top: 0;
-    right: 0;
+#fuse-user-bar.fuse-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: var(--fuse-base-colour-secondary);
 }
+#fuse-user-bar.fuse-container > div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+
+/*  **********  User bar menu  **********  */
 
 .user-bar-menu,
 .user-bar-menu li {
@@ -162,6 +220,26 @@ h6:last-child {
     display: flex;
     flex-wrap: nowrap;
     gap: var(--fuse-base-gap-user-bar);
+}
+.user-bar-menu a {
+    color: var(--fuse-base-colour-white);
+    text-decoration: none;
+}
+.user-bar-menu a:hover {
+    color: var(--fue-base-colour-primary);
+    text-decoration: none;
+}
+
+
+
+
+/*  **********  Inside header  **********  */
+
+#site-header #fuse-user-bar.fuse-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
 }
 
 
